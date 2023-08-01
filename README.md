@@ -128,6 +128,44 @@ complete submission.py
 key_Enc_test.py  
 security_parameter.py  
 complete submission是所有工作量的集合版  
+
 对于SM体系下的椭圆曲线加解密体系，实现了一个ECC—class,椭圆曲线密码类（实现一般椭圆曲线的运算，不局限于SM2）  
 对于SM2-class，则是调用了ECC—class作为底层运算部件，根据RFC6979协议标准实现。该方案进行了基础性的ECDH正确性测试，SM2密钥协商测试，SM2数字签名与验证测试，测试过程均在key-Enc-test文件中可运行。  
 最后main_part运行结果，可复现RFC6979，SM2文档中的示例结果（达到要求）  
+实现效果：  
+ECDH密钥协商耗时7.54ms  
+SM2密钥协商耗时21.04ms  
+SM2签名、验证耗时7.03ms
+SM2加解密耗时6.80ms  
+
+### Project12  verify the above pitfalls with proof-of-concept code
+
+报告阐述了泄漏随机数k导致私钥d的泄漏的原理、并使用代码实现了攻击  
+报告阐述了随机数k重用导致私钥d泄漏的原理、并使用代码实现了攻击  
+报告阐述了两名用户使用同样的随机数k，导致用户之间可以互推出对方使用的私钥d的原理、并使用代码实现了攻击  
+报告阐述了在ECDSA签名和SM2签名中使用相同的私钥d和随机数k，导致私钥d泄漏的原理、并使用代码实现了攻击  
+最后展示了实现的效果，四种情况均可以求解出随机生成的私钥d  
+
+### Project13 Implement the above ECMH scheme
+
+给出了实现ECMH方案的思路  
+给出了UTXO Commitment的两种实现方式、并对安全性进行了讨论  
+给出了ECMH实现的具体过程  
+使用代码实现了ECMH方案  
+
+### Project14 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
