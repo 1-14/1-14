@@ -153,19 +153,83 @@ SM2加解密耗时6.80ms
 给出了ECMH实现的具体过程  
 使用代码实现了ECMH方案  
 
-### Project14 
+### Project14 Implement a PGP scheme with SM2
 
+图文并用介绍了PGP  
+具体算法由SM2和SM4共同实现  
+代码使用gmssl库中的SM2和SM4，实现SM2和SM4加密解密，并定义PGP_enc和PGP_dec直接实现整个系统的加密解密  
+最终成功解密出密钥和密文  
 
+### Project15 implement sm2 2P sign with real network communication
 
+图文并用详细介绍了SM2 2P sign签名方案、结构及原理  
+对关键代码进行了展示  
+代码实现了该方案、并给出了Alice.py和Bob.py的代码各部分的解释（如：交换公钥、签名）
+展示了实现结果的截图  
 
+### Project16 implement sm2 2P decrypt with real network communication
 
+图文并用详细介绍了sm2 2P decrypt解密方案、结构及原理  
+对关键代码、参数进行了展示  
+代码实现了该方案、并给出了Alice.py和Bob.py的代码各部分的解释（如：交换公钥、签名）  
+展示了实现结果的截图 
 
+### Project17 比较Firefox和谷歌的记住密码插件的实现区别
 
+从两个浏览器的密码插件记住密码、填充密码、存在的问题三个部分进行了讨论，分别给出了具体实现原理和问题解释  
+对具体实现的原理进行了分别阐述  
 
+### Project18 send a tx on Bitcoin testnet, and parse the tx data down to every bit, better write script yourself
 
+参照网上资料和自己摸索，在报告中按步骤给出了比特币交易（测试版）的实现流程及当时实现的截图  
+给出了测试网站的收款地址及测试方法  
+给出了查看交易信息的方法  
+给出了在查看交易信息时查看API接口的具体方法，由API接口中的交易数据可对交易进行更深入的分析  
 
+### Project19 forge a signature to pretend that you are Satoshi
 
+给出了ECDSA未检查签名邮件时，伪造合法签名的原理和实现代码  
+给出了代码运行指导  
+对代码中关键部分进行了展示：  
+1. ECDSA——sign  
+2. ECDSA——vrfy
+3. 泄露k导致密钥泄露  
+4. 重用k导致密钥泄露  
+5. 使用相同k，可互相计算密钥  
+6.不验证m的验证算法  
+7.伪装攻击者身份，被认定为Satoshi  
+8.Schnorr_Sign签名  
+9.Schnorr_Sign签名、ecdsa签名使用相同的d，k，导致密钥泄露
+最终给出了运行结果的截图
 
+### Project20 ECMH PoC
 
+（重复项目）  
+参考Project13  
 
+### Project21 Schnorr Bacth
 
+给出了Schnorr签名的数学原理介绍  
+展示了Schnorr签名算法的可视图、并介绍了 Schnorr 签名的好处  
+给出了Schnorr签名的签名流程、批量验证的原理  
+代码实现了签名验证流程、批量验签流程  
+截图展示了实现效果
+
+### Project22 research report on MPT
+
+给出了Merkle Patricia Trie方案研究报告  
+图文并用详细介绍了Merkle Tree原理和Merkle Patricia Trie原理  
+阐述了Merkle Patricia Trie不同Trie路径所对应的key类型
+参考其他论文和文章，给出了构建思路和详细解释  
+详细介绍了Child Trie的数据结构、状态保存方式、以及在智能合约中的作用
+通过代码实现了Merkle Tree和Merkle Patricia Trie  
+代码文件如下：  
+Basic_test.py  
+Branch_node.py  
+Extention_node.py  
+Leaf_node.py  
+MPT_class.py  
+Node_class.py  
+代码作用如名称所示  
+
+## 汇总报告结束，感谢您的耐心阅读！！
