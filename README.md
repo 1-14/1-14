@@ -86,3 +86,31 @@ sha256长度扩展攻击需要3ms
 aes_scalar：22 秒  
 aes_neon：16 秒  
 aes_bitslice：12 秒
+
+### Project9 AES / SM4 software implementation
+
+**SM4**  
+报告中图文并用详细介绍了SM4的工作标准、原理、加解密流程、密钥扩展算法及各个部件  
+在代码中对各个部件进行集成，实现了统一的加解密函数  
+加解密时间均在63ms左右  
+**AES**  
+报告中图文并用详细介绍了SM4的工作标准、原理、加解密流程、密钥扩展算法及各个部件  
+在代码中对各个部件进行集成，实现了统一的加解密函数并且可以自由选择工作模式    
+详细展示了雪崩效应  
+图文并用详细说明了各工作模式  
+代码实现了各工作模式的加解密  
+加密时间在2ms左右  
+解密时间在9ms左右  
+
+### Project10 report on the application of this deduce technique in Ethereum with ECDSA
+
+详细介绍了ECDSA的标准、原理、应用  
+对签名过程和验证过程分别进行了数学原理的阐述  
+对ECDSA的安全性进行了讨论  
+列举了ECDSA在以太坊中的四个应用：  
+1.交易签名  
+2.账户地址  
+3.智能合约  
+4.代币交易  
+
+### Project11 
