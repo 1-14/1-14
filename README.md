@@ -113,4 +113,21 @@ aes_bitslice：12 秒
 3.智能合约  
 4.代币交易  
 
-### Project11 
+### Project11 impl sm2 with RFC6979
+
+详细介绍了ECDSA的标准、原理、应用  
+详细介绍了SM2加密和签名认证的标准、原理、应用  
+图文并用对SM2加解密、签名过程和验证过程分别进行了理论依据的阐述  
+由于代码过长，根据功能对代码进行了分割并分块提交，提供了代码运行指导  
+代码文件如下：  
+ECC_class.py  
+ECDSA.py  
+Main_Part.py  
+SM2_class.py  
+complete submission.py  
+key_Enc_test.py  
+security_parameter.py  
+complete submission是所有工作量的集合版  
+对于SM体系下的椭圆曲线加解密体系，实现了一个ECC—class,椭圆曲线密码类（实现一般椭圆曲线的运算，不局限于SM2）  
+对于SM2-class，则是调用了ECC—class作为底层运算部件，根据RFC6979协议标准实现。该方案进行了基础性的ECDH正确性测试，SM2密钥协商测试，SM2数字签名与验证测试，测试过程均在key-Enc-test文件中可运行。  
+最后main_part运行结果，可复现RFC6979，SM2文档中的示例结果（达到要求）  
